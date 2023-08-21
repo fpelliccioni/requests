@@ -17,6 +17,8 @@
 
 using namespace boost;
 
+// curl "http://localhost:8080/bigfile?total_size=100000000&chunk_size=5000&delay_ms=10" --output output.bin
+
 int main(int argc, char * argv[]) {
   asio::io_context ctx;
   auto tk = asio::bind_executor(ctx, asio::use_future);
