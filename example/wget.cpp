@@ -29,6 +29,7 @@ int main(int argc, char * argv[])
     return 1;
   }
 
+  boost::requests::default_options().enforce_tls = false;
   boost::requests::download(boost::urls::parse_uri(argv[1]).value(), {}, argv[2]);
   return 0;
 }
